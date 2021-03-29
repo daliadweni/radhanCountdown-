@@ -1,0 +1,139 @@
+ <html>
+<head>
+<meta charset="utf-8">
+<meta property="og:type"               content="website" />
+<meta property="og:title"              content="Iftar Ramadhan - Tunisia " />
+<meta property="og:description"        content="توقيت الإفطار في تونس" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مزال على رمضان ؟</title>
+
+ <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Tajawal" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: normal;
+      font: 300 2.25em 'Tajawal';
+color: #ffffff;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+    font: 300 1.25em 'Tajawal';
+color: #ffffff;
+
+}
+
+li span {
+  display: block;
+  font-size: 5rem;
+    font: 300 1.75em 'Tajawal';
+color: #ffffff;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* general styling */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+    background-image: url('rama.jpg');
+	  height: 100%;
+    width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+      font: Tajawal;
+
+}
+
+.container {
+  color: #333;
+  margin: 0 auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+</style>
+<script>
+    const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+let countDown = new Date('apr 15, 2021 00:00:01').getTime(),
+    x = setInterval(function() {    
+
+      let now = new Date().getTime(),
+          distance = countDown - now;
+let p=new Date().getDate();
+        document.getElementsById('day').innerText =p-14,
+        document.getElementById('month').innerText = 0;
+        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+
+      //do something later when date is reached
+      //if (distance < 0) {
+      //  clearInterval(x);
+      //  'IT'S MY BIRTHDAY!;
+      //}
+
+    }, second)
+
+
+</script>
+</head>
+<body>
+<div class="container">
+
+<h1>مــــوعــــــــــــد <strong>رمضان</strong></h1>
+    <h1>: مزال عــلى رمــضــان </h1>
+
+  <ul>
+ 
+    <li><span id="seconds"></span>ثانية</li> 
+
+           <li><span id="minutes"></span>دقيقة</li>
+            <li><span id="hours"></span>ساعة</li>
+
+        <li><span id="day" ></span>يــــــوم</li>
+            <li><span id="month"></span>شـــهر</li>
+
+ 
+  </ul>
+</div>
+<audio src="mu.mp3" autoplay></audio>
+</body></html>

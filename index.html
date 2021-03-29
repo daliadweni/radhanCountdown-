@@ -1,5 +1,7 @@
  <html>
 <head>
+	 <iframe width="560" height="315" style="display : none;" src="https://www.youtube.com/embed/6XsXk6fYlTg?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <meta charset="utf-8">
 <meta property="og:type"               content="website" />
 <meta property="og:title"              content="Iftar Ramadhan - Tunisia " />
@@ -92,15 +94,15 @@ body {
       minute = second * 60,
       hour = minute * 60,
       day = hour * 24;
-
-let countDown = new Date('apr 15, 2021 00:00:01').getTime(),
+let p=new Date().getDate();
+let countDown = new Date('apr 14, 2021 00:00:01').getTime(),
     x = setInterval(function() {    
 
       let now = new Date().getTime(),
           distance = countDown - now;
-let p=new Date().getDate();
-        document.getElementsById('day').innerText =p-14,
-        document.getElementById('month').innerText = 0;
+        document.getElementById('month').innerText =0;
+
+document.getElementById('day').innerText =p-14;
         document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
         document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
         document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
@@ -112,6 +114,7 @@ let p=new Date().getDate();
       //}
 
     }, second)
+  
 
 
 </script>

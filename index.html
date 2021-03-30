@@ -102,7 +102,7 @@ let countDown = new Date('apr 14, 2021 00:00:01').getTime(),
           distance = countDown - now;
         document.getElementById('month').innerText =0;
 
-document.getElementById('day').innerText =p-14;
+document.getElementById('day').innerText =p-new Date('apr 14, 2021 00:00:01').getDate()-1;
         document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
         document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
         document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
